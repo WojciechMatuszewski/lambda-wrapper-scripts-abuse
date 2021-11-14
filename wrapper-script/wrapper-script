@@ -1,0 +1,16 @@
+#!/bin/bash
+
+args=("$@")
+
+script_full_path=$(dirname $(readlink -f "$0"))
+
+node ${script_full_path}/index.js
+
+s3_downloader_script_result=$?
+
+if [ $s3_downloader_script_result -ne 0 ]; then
+    echo "Error: 's3_downloader_script' script returned with non-zero status code: $s3_downloader_script_result"
+    exit $s3_downloader_script_result
+fi
+
+exec "${args[@]}"
