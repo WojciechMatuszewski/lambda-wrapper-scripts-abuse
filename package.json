@@ -10,7 +10,8 @@
     "test": "jest",
     "cdk": "cdk",
     "deploy": "npm run cdk deploy",
-    "bootstrap": "npm run cdk bootstrap"
+    "bootstrap": "npm run cdk bootstrap",
+    "prepare": "cd ./wrapper-script && chmod +x wrapper-script && npm i"
   },
   "devDependencies": {
     "@aws-cdk/assertions": "1.132.0",

@@ -6,5 +6,6 @@ Please keep in mind that the **`Init` phase is constrained to ten seconds**.
 
 ## Deployment
 
+1. `npm run prepare`
 1. `npm run bootstrap`
-2. `npm run deploy`
+1. `npm run deploy`
